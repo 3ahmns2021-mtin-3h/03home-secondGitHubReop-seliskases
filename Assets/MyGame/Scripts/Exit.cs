@@ -1,13 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor.SceneManagement;
 
 public class Exit : MonoBehaviour
-{
-   
+{   
     public void QuitGame()
     {
-        Application.Quit();
+        EditorSceneManager.LoadScene(1);
     }
-
 }

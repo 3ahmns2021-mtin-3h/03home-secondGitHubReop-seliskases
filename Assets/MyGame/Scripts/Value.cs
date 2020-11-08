@@ -16,17 +16,24 @@ public class Value : MonoBehaviour
         buttons.SetActive(true);
         valuePopUp.SetActive(false);
     }
+    
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            ClosePopUp();
+        }
+    }
 
     public void OpenPopUp()
     {
-        foreach(Transform child in buttons.transform)
+        foreach (Transform child in buttons.transform)
         {
-            if(child.gameObject.tag != "ValueButton")
+            if (child.gameObject.tag != "ValueButton")
             {
                 child.gameObject.SetActive(false);
             }
         }
-
         valuePopUp.SetActive(true);
     }
 
@@ -39,7 +46,7 @@ public class Value : MonoBehaviour
         valuePopUp.SetActive(false);
     }
 
-    public void ChangeValue(float valueChange)
+    public void ChangeValue (float valueChange)
     {
         OpenPopUp();
         value += valueChange;

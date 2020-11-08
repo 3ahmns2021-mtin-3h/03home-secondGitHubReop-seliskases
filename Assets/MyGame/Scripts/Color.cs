@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Color : MonoBehaviour
 {
     public GameObject colorPopUp;
-    public GameObject buttons;
+    public GameObject buttons;    
 
     private void Start()
     {
@@ -33,7 +33,7 @@ public class Color : MonoBehaviour
         colorPopUp.SetActive(false);
     }
 
-    public void ChangeColor(Image selectedImage)
+    public void ChangeColor (Image selectedImage)
     {
         Camera.main.backgroundColor = selectedImage.color;
     }
